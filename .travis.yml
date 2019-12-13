@@ -98,15 +98,15 @@ jobs:
   #######################################################
 
 # Matrix hack: Declare same stage multiple times...
-    - &xenial_amd64_alias
+    - &trusty_amd64_alias
       arch: amd64
-      dist: xenial
+      dist: trusty
       language: C
       compiler: gcc
-      env: Ubuntu_ver="Xenial (16.04)"
+      env: Ubuntu_ver="Trusty (14.04)"
 
     # Subsequent instances use alias to test different versions
-    - <<: *xenial_amd64_alias
+    - <<: *trusty_amd64_alias
       compiler: clang
 
 # Matrix hack: Declare same stage multiple times...
